@@ -1,0 +1,125 @@
+.modal {
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 6;
+   width: 100vw;
+   height: 100vh;
+   background-color: #1b1b1be7;
+   opacity: 0;
+   transition: all 0.3s;
+   pointer-events: none;
+
+   &.active {
+      opacity: 1;
+      pointer-events: all;
+   }
+
+   &__content {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      grid-template: repeat(2, auto) / 1fr;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      border-radius: 10px;
+   }
+
+   &__title {
+      font-weight: 500;
+      font-size: 25px;
+      margin: 55px 0 40px 0;
+   }
+
+   &__close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      font-size: 21px;
+      font-weight: 700;
+      cursor: pointer;
+   }
+}
+
+.form {
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   margin: 0 231px;
+
+   &__inputs {
+      display: grid;
+      grid-template: repeat(2, auto) / repeat(2, 320px);
+      gap: 20px;
+
+      input {
+         font-size: 16px;
+         height: 69px;
+         border-radius: 12px;
+         padding: 0 10px;
+         border: 1px solid #62606098;
+      }
+   }
+
+   &__info {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 143%;
+      text-align: center;
+      margin: 40px 0;
+   }
+
+   &__checkbox {
+      display: grid;
+      grid-template-columns: auto auto;
+      font-weight: 400;
+      font-size: 16px;
+      color: #7e868e;
+      margin: 0 0 40px 0;
+
+      input {
+         width: 20px;
+         height: 20px;
+         margin: 0 10px 0 0;
+      }
+
+      a {
+         color: #7e868e;
+         transition: 0.3s;
+         text-decoration: underline;
+
+         &:hover {
+            color: #e56767;
+         }
+      }
+   }
+
+   &__submit {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 152%;
+      text-align: center;
+      padding: 20px 40px;
+      margin: 0 0 55px 0;
+      border-radius: 8px;
+      background-color: #fed84c;
+      transition: 0.2s;
+      color: #2e363e;
+      cursor: pointer;
+
+      &:hover {
+         background-color: #2e363e;
+         color: #f2f6fa;
+      }
+   }
+}

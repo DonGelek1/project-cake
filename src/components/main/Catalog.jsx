@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Catalog = ({ cupcakes }) => {
+const Catalog = ({ cupcakes, setActive }) => {
    return (
       <section className="catalog">
          <h2 className="catalog__title">Для любых событий и дорогих вам людей </h2>
@@ -14,7 +14,7 @@ const Catalog = ({ cupcakes }) => {
                   </div>
                   <div>
                      <p className="cart__price">{item.price}</p>
-                     <button className="cart__button">Заказать</button>
+                     <button className="cart__button" onClick={() => setActive(true)}>Заказать</button>
                   </div>
                </div>
             ))}

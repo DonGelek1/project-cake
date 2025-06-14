@@ -78,3 +78,6 @@ body {
   bottom: 0;
   background-color: #ffffff;
 }
+.no-scroll {
+  overflow: hidden;
+}

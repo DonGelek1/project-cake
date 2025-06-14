@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
 import Catalog from './Catalog';
 import Gallery from './Gallery';
+import Modal from '../modal/Modal';
 
 import cake1 from '../../assets/gallery/img1.png';
 import cake2 from '../../assets/gallery/img2.png';
@@ -25,6 +26,8 @@ import photo8 from '../../assets/gallery/photo8.png';
 
 
 const Main = () => {
+   const [modalActive, setModalActive] = useState(false)
+
    const cupcakes = [
       {
          img: cake9,
@@ -96,8 +99,9 @@ const Main = () => {
 
    return (
       <main className="main">
-         <Catalog cupcakes={cupcakes} />
+         <Catalog cupcakes={cupcakes} setActive={setModalActive} />
          <Gallery photos={photos} />
+         <Modal active={modalActive} setActive={setModalActive} />
       </main>
 
    )
